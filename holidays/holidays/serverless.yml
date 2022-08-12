@@ -1,0 +1,14 @@
+org: psd22
+app: holidays-api
+service: holidays
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - httpApi: '*'

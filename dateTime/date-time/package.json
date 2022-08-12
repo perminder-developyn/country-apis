@@ -1,0 +1,11 @@
+{
+  "name": "date-time",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.19",
+    "serverless-http": "^2.7.0"
+  }
+}
