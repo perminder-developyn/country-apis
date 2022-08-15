@@ -1,5 +1,6 @@
 const serverless = require("serverless-http");
 const express = require("express");
+const helmet = require('helmet');
 const app = express();
 const Holidays = require('date-holidays');
 const hd = new Holidays();
@@ -9,12 +10,13 @@ const port = 5000;
 
 
 app.use(body_parser.json());
+app.use(helmet());
 
 
 app.use(cors({
   origin: (origin, callback) => {
       if (!origin || [
-          'http://localhost:8080'
+          'http://ec2-52-91-41-236.compute-1.amazonaws.com'
       ].includes(origin)) {
           return callback(null, true);
       }
